@@ -1,192 +1,206 @@
-*{
+/* Basic Reset and Global Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Using Inter font as per instructions */
 }
 
-.header{
-min-height: 100vh;
-width: 100%;
-background-image:url(blabckbugatti.jpg);
-background-position: center;
-background-size: cover;
-position: relative;
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-
-nav{
-display: flex;
-padding: 2% 6%;
-justify-content: space-between;
-align-items: center;
+/* Header Section */
+.header {
+    min-height: 100vh; /* Full viewport height */
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url('https://placehold.co/1920x1080/000000/FFFFFF?text=Luxury+Car+Background'); /* Placeholder image */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Stack nav and container */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 20px; /* Add some padding for smaller screens */
 }
 
-nav img{
-width: 70px;
-border-radius: 10px;
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 5%; /* Padding for nav bar */
+    position: absolute; /* Position nav at the top */
+    top: 0;
+    left: 0;
+    z-index: 100; /* Ensure nav is above other content */
 }
 
-
-.nav-links{
-flex: 1;
-text-align: right;
+nav img {
+    width: 100px; /* Adjust logo size */
+    border-radius: 8px; /* Rounded corners for logo */
 }
 
-.nav-links ul li{
-list-style: none;
-display: inline-block;
-padding: 8px 12px;
-position: relative;
+.nav-links ul {
+    list-style: none;
+    display: flex; /* Display list items in a row */
+    gap: 20px; /* Space between nav items */
 }
 
-.nav-links ul li a{
-color: white;
-text-decoration: none;
-font-size: 12px;
-}
-
-
-.container{
-width: 90%;
-color: #ffffff;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%,-50%);
-text-align: center;
-}
-
-.container h1{
-    font-size: 65px;
-    color: blue;
-}
-
-.container p{
-margin: 10px 0 40px;
-color:blue;
-}
-
-.hero-btn{
-display: inline-block;
-text-decoration: none;
-color: #ffffff;
-border: 1px solid #fff;
-padding: 12px 34px;
-font-size: 13px;
-background: transparent;
-position: relative;
-cursor: pointer;
-}
-
-.hero-btn:hover{
-border: 1px solid #bbb;
-background-color: blue;
-transition: 1s;
-
-}
-
-
-
-
-
-.boss{
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-margin-top: 100px;
-}
-
-h1{
-font-weight: 400;
-text-align: center;
-margin-top: 70px;
-margin-bottom: 20px;
-color:blue;
-}
-
-.card{
-width: 325px;
-background-color: #f0f0f0;
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-margin: 20px;
-}
-
-.card img{
-width: 100%;
-height: auto;
-
-}
-
-.content{
-    padding: 16px;
-}
-
-
-/*----about style*/
-
-
-.big-container{
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-margin-top: 100px;
-
-}
-.rate{
-    font-size: 30px;
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
     font-weight: 500;
-    font-style: italic;
-    color: blue;
-    margin-top: 40px;
+    padding: 8px 15px;
+    border-radius: 8px; /* Rounded corners for nav links */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-h2{
-font-weight: 400;
-text-align: center;
-margin-top: 70px;
-margin-bottom: 20px;
-color:aqua;
+.nav-links ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
 }
 
-
-.card{
-width: 325px;
-background-color: #f0f0f0;
-border-radius: 8px;
-overflow: hidden;
-box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-margin: 20px;
+/* Container for Hero Content */
+.container {
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    max-width: 900px; /* Limit width for better readability */
+    margin-top: 80px; /* Push content down from nav */
 }
 
-
-.card img{
-width: 100%;
-height: auto;
-
+.container h1 {
+    font-size: 3.5rem; /* Large heading */
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better visibility */
 }
 
+.container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 700px; /* Limit paragraph width */
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
 
+/* Hero Button */
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 1rem;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    border-radius: 8px; /* Rounded corners for button */
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
 
+.hero-btn:hover {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #fff;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Subtle shadow on hover */
+}
 
+/* Responsive Design */
 
+/* For Tablets and smaller desktops (768px to 1024px) */
+@media (max-width: 1024px) {
+    .container h1 {
+        font-size: 3rem;
+    }
 
+    .container p {
+        font-size: 1.1rem;
+    }
 
+    nav img {
+        width: 80px;
+    }
 
+    .nav-links ul li a {
+        font-size: 0.9rem;
+        padding: 6px 12px;
+    }
+}
 
+/* For Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+    nav {
+        flex-direction: column; /* Stack logo and nav links */
+        align-items: flex-start; /* Align items to the start */
+        padding: 15px 5%;
+    }
 
+    nav img {
+        margin-bottom: 15px; /* Space between logo and nav links */
+    }
 
+    .nav-links {
+        width: 100%; /* Make nav links take full width */
+        text-align: center;
+    }
 
+    .nav-links ul {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 10px; /* Reduce gap */
+        width: 100%;
+    }
 
+    .nav-links ul li {
+        width: 100%; /* Make each list item take full width */
+    }
 
+    .nav-links ul li a {
+        display: block; /* Make links block-level for better touch target */
+        padding: 10px;
+        font-size: 1rem;
+        background-color: rgba(255, 255, 255, 0.1); /* Slightly visible background */
+    }
 
+    .container {
+        margin-top: 150px; /* Adjust margin to account for stacked nav */
+        padding: 15px;
+    }
 
+    .container h1 {
+        font-size: 2.2rem; /* Smaller heading for mobile */
+        margin-bottom: 15px;
+    }
 
-/*contact section*/
+    .container p {
+        font-size: 1rem; /* Smaller paragraph text */
+        margin-bottom: 30px;
+    }
 
+    .hero-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
 
-.card h1{
-font-size: 18px;
+/* For very small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+    nav img {
+        width: 70px;
+    }
 
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .container p {
+        font-size: 0.9rem;
+    }
 }

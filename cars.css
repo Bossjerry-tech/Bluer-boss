@@ -24,7 +24,7 @@ body {
     flex-direction: column; /* Stack nav and container */
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    padding: 20px; /* Add some padding for smaller screens */
+    padding: 10px; /* Add some padding for smaller screens */
 }
 
 /* Navigation Bar */

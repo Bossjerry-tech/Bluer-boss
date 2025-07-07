@@ -16,7 +16,7 @@ body {
 .header {
     min-height: 100vh; /* Full viewport height */
     width: 100%;
-    background-image: url('rolls.jpg');
+    background-image: url('rolls.jpeg');
     background-position: center;
     background-size: cover;
     position: relative;

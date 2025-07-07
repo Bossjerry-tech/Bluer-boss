@@ -1,127 +1,124 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-      *{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: sans-serif;
-      }
-body{
-  background-color: rgb(195, 0, 255);
-}
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background-color: rgb(195, 0, 255);
+        }
 
-.call{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        .call{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: calc(100vh - 60px); /* Adjust based on footer height */
+            padding: 20px; /* Add some padding around the content */
+        }
 
-.bare{
-  width: 50%;
-  height: 70vb;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  margin-top: 50px;
-}
-.bare h1{
-  color: blue;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  font-style: italic;
-}
+        .bare{
+            width: 50%;
+            min-height: 70vh; /* Changed to min-height for better content adaptation */
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            padding: 20px; /* Added padding inside the bare container */
+            text-align: center; /* Center text for better mobile display */
+        }
+        .bare h1{
+            color: blue;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
 
-.bare p{
-  color: black;
-  font-size: 1.2rem;
-  margin: 10px 0;
-  font-style: italic;
-}
+        .bare p{
+            color: black;
+            font-size: 1.2rem;
+            margin: 10px 0;
+            font-style: italic;
+            display: flex; /* Use flexbox for icon and text alignment */
+            align-items: center; /* Vertically align icon and text */
+        }
 
+        /* Adjust icon and text alignment for paragraphs in bare */
+        .bare p i {
+            margin-right: 10px;
+            color: blue;
+            font-size: 1.5rem;
+        }
 
-.footer{
+        .footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
 
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .bare {
+                width: 90%; /* Take more width on smaller screens */
+                margin-top: 20px; /* Adjust margin for smaller screens */
+            }
 
+            .bare h1 {
+                font-size: 2rem; /* Reduce font size for smaller screens */
+            }
 
+            .bare p {
+                font-size: 1rem; /* Reduce font size for paragraphs */
+            }
 
+            .bare p i {
+                font-size: 1.2rem; /* Reduce icon size */
+            }
+        }
 
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-.bare i{
-  color: blue;
-  margin-right: 10px;
-}
-.bare i.fa-envelope,
-.bare i.fa-phone,
-.bare i.fa-map-marker {
-  font-size: 1.5rem;
-  color: blue;
-  margin-right: 10px;
-}
+        @media (max-width: 480px) {
+            .bare {
+                width: 95%; /* Even more width on very small screens */
+            }
 
+            .bare h1 {
+                font-size: 1.8rem;
+            }
+
+            .bare p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 <body>
 
-
 <div class="call">
-
-<div class="bare">
-
-<h1>Contact</h1>
-<p><i class="fa fa-envelope" aria-hidden="true"></i> Email: bossgerald94@gmail.com</i></p>
-<p><i class="fa fa-phone" aria-hidden="true"></i> phone: 0111498075</i></p>
-
-<p><i class="fa fa-map-marker" aria-hidden="true"></i> Location: Nairobi, Kenya</p>
-
-
+    <div class="bare">
+        <h1>Contact</h1>
+        <p><i class="fa fa-envelope" aria-hidden="true"></i> Email: bossgerald94@gmail.com</p>
+        <p><i class="fa fa-phone" aria-hidden="true"></i> Phone: 0111498075</p>
+        <p><i class="fa fa-map-marker" aria-hidden="true"></i> Location: Nairobi, Kenya</p>
+    </div>
 </div>
 
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-<!-----footer section-->
-<footer>
-
-<div class="footer">
-  <p>Copyright @JerryBoss websites</p>
-</div>
-
-
+<footer class="footer">
+    <p>Copyright @JerryBoss websites</p>
 </footer>
 
 </body>

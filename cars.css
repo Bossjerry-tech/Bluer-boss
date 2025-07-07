@@ -16,7 +16,7 @@ body {
 .header {
     min-height: 100vh; /* Full viewport height */
     width: 100%;
-    background-image: url('cartoon.jpg');
+    background-image: url('whiteaudi.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
